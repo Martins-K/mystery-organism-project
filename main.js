@@ -40,6 +40,7 @@ const pAequorFactory = (specimanNum, dna) => {
     },
     willLikelySurvive() {
       const cOrG = this.dna.filter(el => el === "C" || el === "G");
+      console.log("Specimen no. "+this.specimanNum+" has "+cOrG.length+" \"C\" and \"D\" bases combined with the total bases being "+this.dna.length+" (>60%, therefore, this specimen will survive.)")
       return cOrG.length / this.dna.length >= 0.6;
     },
   }
@@ -56,4 +57,7 @@ while (survivingSpecimen.length < 30) {
   idCounter++;
 }
 
-console.log(survivingSpecimen)
+for (let a = 0; a<survivingSpecimen.length; a++) {
+  console.log(survivingSpecimen[a]);
+  console.log(survivingSpecimen[a].willLikelySurvive());
+}
