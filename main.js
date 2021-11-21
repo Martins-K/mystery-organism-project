@@ -12,7 +12,7 @@ const mockUpStrand = () => {
   }
   return newStrand
 }
-
+//this is a function to create new object
 const pAequorFactory = (specimanNum, dna) => {
   return {
     specimanNum,
